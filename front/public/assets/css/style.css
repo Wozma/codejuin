@@ -1,0 +1,371 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol,
+ul {
+	list-style: none;
+}
+blockquote,
+q {
+	quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* /reset css */
+
+@font-face {
+	font-family: 'Pacifico';
+	src: url(../fonts/Pacifico-Regular.ttf);
+}
+
+p {
+	font-family: 'Pacifico';
+	color: #994044;
+	font-size: 24px;
+}
+
+h1 {
+	font-size: 24px;
+	font-family: 'Pacifico';
+	color: #994044;
+}
+
+.general {
+	display: flex;
+}
+
+.gauche {
+	background-color: #faf3f4;
+	height: 100vh;
+	width: 40%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.img1 {
+	width: 70%;
+	height: 40%;
+}
+
+.img2 {
+	width: 65%;
+	height: 65%;
+	position: relative;
+	margin-left: 5px;
+}
+
+.droite {
+	background: url(../img/bdxnextgen/background.svg);
+	background-size: 50%;
+	height: 100vh;
+	width: 60%;
+}
+
+.podium {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-bottom: 8%;
+	margin-bottom: 50px;
+}
+
+.jeBouge {
+	margin-right: 110px;
+	position: absolute;
+	margin-top: 100px;
+	margin-left: -150px;
+}
+
+.jeBouge1 {
+	position: absolute;
+	margin-top: 40px;
+}
+
+.jeBouge2 {
+	margin-top: 120px;
+	margin-left: 155px;
+	position: absolute;
+}
+
+.scoresOuf {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 20%;
+	padding-left: 10%;
+	padding-right: 10%;
+	background-color: #f9d4cb;
+	border-radius: 50px;
+	margin-top: 30px;
+	height: 50px;
+	width: 70px;
+}
+
+.scoresOuf img {
+	width: 50%;
+}
+
+.scoresOuf p {
+	margin-left: 5px;
+	margin-bottom: 5px;
+}
+
+.scoresOuf1 {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 20%;
+	padding-left: 10%;
+	padding-right: 10%;
+	background-color: #f1a796;
+	border-radius: 50px;
+	margin-top: 30px;
+	height: 50px;
+	width: 70px;
+}
+
+.scoresOuf1 img {
+	width: 50%;
+}
+
+.scoresOuf1 p {
+	margin-left: 5px;
+	margin-bottom: 5px;
+}
+.scoresOuf2 {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 20%;
+	padding-left: 10%;
+	padding-right: 10%;
+	background-color: #f9d4cb;
+	border-radius: 50px;
+	margin-top: 30px;
+	height: 50px;
+	width: 70px;
+}
+
+.scoresOuf2 img {
+	width: 50%;
+}
+
+.scoresOuf2 p {
+	margin-left: 5px;
+	margin-bottom: 5px;
+}
+
+.droite {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.screen {
+	width: 90%;
+	height: 100%;
+	background-color: #fef9f6;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	box-shadow: 1px 1px 12px rgb(220, 220, 220);
+}
+
+.tableau {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-top: 30px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.img3 {
+	margin-top: 30px;
+	width: 400px;
+}
+
+.card {
+	display: flex;
+	flex-direction: row;
+	width: 300px;
+	background-color: #faf3f4;
+	border: solid 1px #d6b3b5;
+	justify-content: space-between;
+	align-items: center;
+	padding-right: 30px;
+	margin-top: 20px;
+	border-radius: 10px;
+}
+
+.scoring {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-left: 5%;
+	padding-right: 5%;
+	background-color: #f9d4cb;
+	border-radius: 50px;
+	height: 40px;
+	width: 60px;
+	padding-top: -10px;
+	padding-bottom: -10px;
+}
+
+.scoring img {
+	width: 50%;
+}
+
+.scoring p {
+	margin-left: 5px;
+	margin-bottom: 5px;
+	display: flex;
+	justify-content: center;
+}
+
+.nombre {
+	width: 50px;
+	height: 50px;
+	background-color: #f9d4cb;
+	border-radius: 9px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.prenom2 {
+	margin-right: 50px;
+}
+
+.partieGauche {
+	margin-right: 25px;
+}
+
+.partieDroite {
+	margin-left: 25px;
+}
+
+.prenom {
+	margin-bottom: 120px;
+	margin-right: 80px;
+}

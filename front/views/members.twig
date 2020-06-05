@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>Membres</title>
+</head>
+<body class="p-5">
+
+
+
+    <div class="general">
+        <div class="gauche">
+            <img class="img1" src="assets/img/bdxnextgen/Group 9.svg" alt="">
+            <div class="podium">
+                <div class="prenom" style="display: flex;">
+                    <div class="jeBouge">
+                        <h1 class="titre">{{membersTop[1].pseudo}}</h1>
+                        <div class="scoresOuf">
+                            <p>{{membersTop[1].score}}</p>
+                            <img src="assets/img/bdxnextgen/star.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="jeBouge1">
+                        <h1 class="titre">{{membersTop[0].pseudo}}</h1>
+                        <div class="scoresOuf1">
+                            <p>{{membersTop[0].score}}</p>
+                            <img src="assets/img/bdxnextgen/star.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="jeBouge2">
+                        <h1 class="titre">{{membersTop[2].pseudo}}</h1>
+                        <div class="scoresOuf2">
+                            <p>{{membersTop[2].score}}</p>
+                            <img src="assets/img/bdxnextgen/star.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="circles">
+                    <div class="un">
+                        <p></p>
+                        <img src="" alt="">
+                    </div>
+                    <div class="deux">
+                        <p></p>
+                        <img src="" alt="">
+                    </div>
+                    <div class="trois">
+                        <p></p>
+                        <img src="" alt="">
+                    </div>
+                </div>
+                <img class="img2" src="assets/img/bdxnextgen/podium.svg" alt="">
+            </div>
+        </div>
+        <div class="droite">
+            <div class="screen">
+                <img src="assets/img/bdxnextgen/scores.png" alt="" class="img3">
+                <div class="tableau">
+                    {% for key,member in membersOther %}
+                        <div class="card">
+                            <!-- card 1 -->
+                            <div class="nombre">
+                                <p>{{ key+4 }}</p>
+                            </div>
+                            <div class="prenom2">
+                                <h1>{{member.pseudo}}</h1>
+                            </div>
+                            <div class="scoring">
+                                <p>{{member.score}}</p>
+                                <img src="assets/img/bdxnextgen/star.svg" class=img2 alt="">
+                            </div>
+                        </div>
+                    {% endfor %}
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+<script src="http://localhost:3000/socket.io/socket.io.js"></script>
+<script>
+{# const socket = io("http://localhost:3000")
+socket.on('add', data => {
+    console.log(data)
+    document.location.reload(true);
+}) #}
+function timeout() {
+    setTimeout(function () {
+        document.location.reload(true);
+        timeout();
+    }, 9000);
+}
+timeout()
+
+</script>
+</body>
+</html>
